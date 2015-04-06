@@ -1,0 +1,40 @@
+{
+  "name": "grunt-marko",
+  "description": "The best Grunt plugin ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/superbarne/grunt-marko",
+  "author": {
+    "name": "Barne Jürgensen",
+    "email": "barne.juergensen@codeanker.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/superbarne/grunt-marko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/superbarne/grunt-marko/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/superbarne/grunt-marko/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "marko": "^2.2.0"
+  }
+}
