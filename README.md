@@ -1,7 +1,5 @@
 # grunt-marko
-
-> The best Grunt plugin ever.
-
+> a simple (marko)[https://github.com/raptorjs/marko] grunt integration
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -20,70 +18,44 @@ grunt.loadNpmTasks('grunt-marko');
 ## The "marko" task
 
 ### Overview
-In your project's Gruntfile, add a section named `marko` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `marko` to the data object passed into `grunt.initConfig()`. 
 
 ```js
 grunt.initConfig({
   marko: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    index:{
+      template:'./template/layout.html',
+      dest:'./dist/index.html',
+      data:{
+        title:'sample'
+      }
+    }
   },
 });
 ```
 
 ### Options
 
-#### options.separator
+#### task.template
 Type: `String`
-Default value: `',  '`
+Default value: required
 
-A string value that is used to do something with whatever.
+The path to marko template file.
 
-#### options.punctuation
+#### task.dest
 Type: `String`
-Default value: `'.'`
+Default value: required
 
-A string value that is used to do something else with whatever else.
+The destination where the rendered template should be.
 
-### Usage Examples
+#### task.data
+Type: `Object`
+Default value: empty Object
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+The data wich should passed to the template.
 
-```js
-grunt.initConfig({
-  marko: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  marko: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+#important
+For all other features like Custom Tags visit the (marko repository)[https://github.com/raptorjs/marko].
 
 ## Release History
 _(Nothing yet)_
